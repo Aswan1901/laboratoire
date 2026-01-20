@@ -23,6 +23,9 @@ class Sample
     #[ORM\Column]
     private ?\DateTimeImmutable $arrivalTime = null;
 
+    #[ORM\ManyToOne(inversedBy: 'sampleId')]
+    private ?Patient $patient = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,6 +63,18 @@ class Sample
     public function setArrivalTime(\DateTimeImmutable $arrivalTime): static
     {
         $this->arrivalTime = $arrivalTime;
+
+        return $this;
+    }
+
+    public function getPatient(): ?Patient
+    {
+        return $this->patient;
+    }
+
+    public function setPatient(?Patient $patient): static
+    {
+        $this->patient = $patient;
 
         return $this;
     }
