@@ -8,10 +8,12 @@ RUN chmod +x /usr/local/bin/install-php-extensions
 
 RUN install-php-extensions opcache iconv soap
 RUN install-php-extensions zip intl fileinfo
-RUN install-php-extensions pdo redis mysqli pdo_mysql
 RUN install-php-extensions gd
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
+
+RUN install-php-extensions pdo pdo_pgsql pgsql
+
 
 COPY --link \
     --from=ghcr.io/symfony-cli/symfony-cli:latest \
