@@ -1,0 +1,44 @@
+services:
+  database:
+    image: postgres:18
+    container_name: laboratoire-postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: laboratoire
+    ports:
+      - "5432:5432"
+    volumes:
+      - database_data:/var/lib/postgresql
+    networks:
+      - app_network
+    restart: always
+
+  php:
+    container_name: php
+    build: ./Dockerfile/php
+    volumes:
+      - ./laboratoire:/var/www
+
+    depends_on :
+      - database
+    networks:
+      - app_network
+  nginx:
+    container_name: nginx
+    build: Dockerfile/nginx
+    ports:
+      - "8000:80"
+    volumes:
+      - ./laboratoire:/var/www
+    depends_on:
+      - php
+    networks:
+      - app_network
+
+volumes:
+  database_data:
+
+networks:
+  app_network:
+    driver: bridge
