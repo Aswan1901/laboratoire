@@ -1,6 +1,6 @@
 # Projet laboratoire
 
-## Architecture et choix techniques
+## choix techniques
 
 - Symfony
 - Doctrine ORM
