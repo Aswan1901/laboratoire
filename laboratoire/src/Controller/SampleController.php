@@ -82,6 +82,7 @@ final class SampleController extends AbstractController
                         'priority'   => $sample->getPriority(),
                         'name' => $technician->getName(),
                         'equipment'  => $assignedEquipment,
+                        'duration'   => $technician->getDuration(),
                     ];
 
                     $assigned = true;
@@ -124,6 +125,7 @@ final class SampleController extends AbstractController
                             'priority'   => $sample->getPriority(),
                             'name' => $technician->getName(),
                             'equipment'  => $assignedEquipment,
+                            'duration'   => $technician->getDuration(),
                         ];
                         break;
                     }
