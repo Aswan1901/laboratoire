@@ -29,7 +29,7 @@ docker compose up
       "priority": "STAT",
       "name": "Charlotte",
       "equipment": "Equpement 2",
-      "duration":120 minutes 
+      "duration": 45 minutes 
     }
   ]
 }
