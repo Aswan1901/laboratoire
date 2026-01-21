@@ -26,6 +26,12 @@ class Technician
     #[ORM\Column]
     private ?\DateTimeImmutable $endTime = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $sampleToAnalyse = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $equipmentUsed = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +81,30 @@ class Technician
     public function setEndTime(\DateTimeImmutable $endTime): static
     {
         $this->endTime = $endTime;
+
+        return $this;
+    }
+
+    public function getSampleToAnalyse(): ?string
+    {
+        return $this->sampleToAnalyse;
+    }
+
+    public function setSampleToAnalyse(?string $sampleToAnalyse): static
+    {
+        $this->sampleToAnalyse = $sampleToAnalyse;
+
+        return $this;
+    }
+
+    public function getEquipmentUsed(): ?string
+    {
+        return $this->equipmentUsed;
+    }
+
+    public function setEquipmentUsed(?string $equipmentUsed): static
+    {
+        $this->equipmentUsed = $equipmentUsed;
 
         return $this;
     }
