@@ -21,8 +21,8 @@ class TechniciansFixtures extends Fixture
             $technician = new Technician();
             $technician->setName($faker->firstName());
             $technician->setSpeciality($arrayTypes[array_rand($arrayTypes)]);
-            $technician->setStartTime($randTime->setTime(mt_rand(0,12),mt_rand(0,59)));
-            $technician->setEndTime($randTime->setTime(mt_rand(13,23),mt_rand(0,59)));
+            $technician->setStartTime($randTime->setTime(mt_rand(8,12),mt_rand(0,59)));
+            $technician->setEndTime($randTime->setTime(mt_rand(13,17),mt_rand(0,59)));
             $manager->persist($technician);
         }
         $manager->flush();

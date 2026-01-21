@@ -18,7 +18,10 @@ class Equipment
     private ?Type $type = null;
 
     #[ORM\Column]
-    private ?bool $available = null;
+    private ?bool $available = true;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $name = null;
 
     public function getId(): ?int
     {
@@ -45,6 +48,18 @@ class Equipment
     public function setAvailable(bool $available): static
     {
         $this->available = $available;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(?string $name): static
+    {
+        $this->name = $name;
 
         return $this;
     }
