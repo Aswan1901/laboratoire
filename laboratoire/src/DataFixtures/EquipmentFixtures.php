@@ -11,14 +11,14 @@ class EquipmentFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
+        // récupérer les types
         $typeArray = [Type::BLOOD, Type::TISSUE, Type::URINE];
-
 
         // 10 equipments
         for ($i = 0; $i < 10; $i++) {
             $equipment = new Equipment();
+            $equipment->setName('Equipment ' . $i);
             $equipment->setType($typeArray[array_rand($typeArray)]);
-            $equipment->setAvailable((bool) rand(0, 1));
             $manager->persist($equipment);
         }
 

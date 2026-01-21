@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Enum\Priority;
 use App\Enum\Type;
 use App\Repository\SampleRepository;
 use Doctrine\ORM\Mapping as ORM;
@@ -18,13 +19,19 @@ class Sample
     private ?Type $type = null;
 
     #[ORM\Column(nullable: true)]
-    private ?\DateTimeImmutable $analysisTime = null;
+    private ?\DateInterval $analysisDuration = null;
 
     #[ORM\Column]
     private ?\DateTimeImmutable $arrivalTime = null;
 
     #[ORM\ManyToOne(inversedBy: 'sampleId')]
     private ?Patient $patient = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $name = null;
+
+    #[ORM\Column(enumType: Priority::class)]
+    private ?Priority $priority = null;
 
     public function getId(): ?int
     {
@@ -43,14 +50,24 @@ class Sample
         return $this;
     }
 
-    public function getAnalysisTime(): ?\DateTimeImmutable
+    public function getAnalysisDuration(): ?\DateInterval
     {
-        return $this->analysisTime;
+        return $this->analysisDuration;
     }
 
-    public function setAnalysisTime(?\DateTimeImmutable $analysisTime): static
+    public function setAnalysisDuration(?\DateInterval $analysisDuration): self
     {
-        $this->analysisTime = $analysisTime;
+        if ($analysisDuration !== null && $this->getPriority() === 'STAT') {
+
+            $minutes = ($analysisDuration->h * 60) + $analysisDuration->i;
+            if ($minutes < 59) {
+                throw new \InvalidArgumentException(
+                    'Un échantillon STAT ne peut pas dépasser 59 minutes.'
+                );
+            }
+    }
+
+        $this->analysisDuration = $analysisDuration;
 
         return $this;
     }
@@ -75,6 +92,30 @@ class Sample
     public function setPatient(?Patient $patient): static
     {
         $this->patient = $patient;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): static
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getPriority(): ?Priority
+    {
+        return $this->priority;
+    }
+
+    public function setPriority(Priority $priority): static
+    {
+        $this->priority = $priority;
 
         return $this;
     }
