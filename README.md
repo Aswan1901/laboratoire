@@ -18,7 +18,7 @@ Chaque échantillon doit être assigné à :
 - 1 équipement
 
 Contraintes :
-- Le technicien doit correspondre au type de l’échantillon OU être `GENERAL`
+- Le technicien doit correspondre au type de l’échantillon OU être GENERAL
 - Les spécialistes sont prioritaires sur les GENERAL
 - Un technicien ne peut pas traiter 2 échantillons en même temps
 - Un équipement ne peut pas être utilisé simultanément
