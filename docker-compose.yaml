@@ -1,19 +1,4 @@
 services:
-  database:
-    image: postgres:16
-    container_name: laboratoire-postgres
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: laboratoire
-    ports:
-      - "5432:5432"
-    volumes:
-      - database_data:/var/lib/postgresql/data
-    networks:
-      - app_network
-    restart: always
-
   php:
     container_name: php
     build: ./Dockerfile/php
