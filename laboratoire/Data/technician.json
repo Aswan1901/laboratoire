@@ -1,0 +1,23 @@
+[
+    {
+        "id": "TECH1",
+        "name": "Alice Martin",
+        "speciality": "BLOOD",
+        "startTime": "10:00",
+        "endTime": "15:00"
+    },
+    {
+        "id": "TECH2",
+        "name": "Bob Dupont",
+        "speciality": "URINE",
+        "startTime": "08:00",
+        "endTime": "17:00"
+    },
+    {
+        "id": "TECH3",
+        "name": "Claire Bernard",
+        "speciality": "GENERAL",
+        "startTime": "09:00",
+        "endTime": "18:00"
+    }
+]

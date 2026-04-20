@@ -65,11 +65,43 @@
       <path value="$PROJECT_DIR$/laboratoire/vendor/doctrine/orm" />
       <path value="$PROJECT_DIR$/laboratoire/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/laboratoire/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/staabm/side-effects-detector" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/laboratoire/vendor/phpunit/php-file-iterator" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.4" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/laboratoire/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />

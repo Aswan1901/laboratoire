@@ -1,0 +1,20 @@
+[
+    {
+        "id": "EQ001",
+        "name": "Analyseur Sang",
+        "type": "BLOOD",
+        "available": true
+    },
+    {
+        "id": "EQ002",
+        "name": "Analyseur Urine",
+        "type": "URINE",
+        "available": true
+    },
+    {
+        "id": "EQ003",
+        "name": "Scanner Tissu",
+        "type": "TISSUE",
+        "available": true
+    }
+]

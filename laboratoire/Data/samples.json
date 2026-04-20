@@ -1,0 +1,26 @@
+[
+    {
+        "id": "S001",
+        "type": "BLOOD",
+        "priority": "URGENT",
+        "analysisTime": 45,
+        "arrivalTime": "09:00",
+        "patientId": "P123"
+    },
+    {
+        "id": "S002",
+        "type": "URINE",
+        "priority": "STAT",
+        "analysisTime": 30,
+        "arrivalTime": "08:30",
+        "patientId": "P124"
+    },
+    {
+        "id": "S003",
+        "type": "TISSUE",
+        "priority": "ROUTINE",
+        "analysisTime": 60,
+        "arrivalTime": "10:00",
+        "patientId": "P125"
+    }
+]
