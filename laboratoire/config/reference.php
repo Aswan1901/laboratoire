@@ -352,7 +352,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         enabled?: bool|Param, // Default: false
  *     },
  *     serializer?: bool|array{ // Serializer configuration
- *         enabled?: bool|Param, // Default: false
+ *         enabled?: bool|Param, // Default: true
  *         enable_attributes?: bool|Param, // Default: true
  *         name_converter?: scalar|null|Param,
  *         circular_reference_handler?: scalar|null|Param,
@@ -369,7 +369,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         }>,
  *     },
  *     property_access?: bool|array{ // Property access configuration
- *         enabled?: bool|Param, // Default: false
+ *         enabled?: bool|Param, // Default: true
  *         magic_call?: bool|Param, // Default: false
  *         magic_get?: bool|Param, // Default: true
  *         magic_set?: bool|Param, // Default: true
@@ -377,11 +377,11 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         throw_exception_on_invalid_property_path?: bool|Param, // Default: true
  *     },
  *     type_info?: bool|array{ // Type info configuration
- *         enabled?: bool|Param, // Default: false
+ *         enabled?: bool|Param, // Default: true
  *         aliases?: array<string, scalar|null|Param>,
  *     },
  *     property_info?: bool|array{ // Property info configuration
- *         enabled?: bool|Param, // Default: false
+ *         enabled?: bool|Param, // Default: true
  *         with_constructor_extractor?: bool|Param, // Registers the constructor extractor.
  *     },
  *     cache?: array{ // Cache configuration
@@ -879,37 +879,12 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         resolve_target_entities?: array<string, scalar|null|Param>,
  *     },
  * }
- * @psalm-type DoctrineMigrationsConfig = array{
- *     enable_service_migrations?: bool|Param, // Whether to enable fetching migrations from the service container. // Default: false
- *     migrations_paths?: array<string, scalar|null|Param>,
- *     services?: array<string, scalar|null|Param>,
- *     factories?: array<string, scalar|null|Param>,
- *     storage?: array{ // Storage to use for migration status metadata.
- *         table_storage?: array{ // The default metadata storage, implemented as a table in the database.
- *             table_name?: scalar|null|Param, // Default: null
- *             version_column_name?: scalar|null|Param, // Default: null
- *             version_column_length?: scalar|null|Param, // Default: null
- *             executed_at_column_name?: scalar|null|Param, // Default: null
- *             execution_time_column_name?: scalar|null|Param, // Default: null
- *         },
- *     },
- *     migrations?: list<scalar|null|Param>,
- *     connection?: scalar|null|Param, // Connection name to use for the migrations database. // Default: null
- *     em?: scalar|null|Param, // Entity manager name to use for the migrations database (available when doctrine/orm is installed). // Default: null
- *     all_or_nothing?: scalar|null|Param, // Run all migrations in a transaction. // Default: false
- *     check_database_platform?: scalar|null|Param, // Adds an extra check in the generated migrations to allow execution only on the same platform as they were initially generated on. // Default: true
- *     custom_template?: scalar|null|Param, // Custom template path for generated migration classes. // Default: null
- *     organize_migrations?: scalar|null|Param, // Organize migrations mode. Possible values are: "BY_YEAR", "BY_YEAR_AND_MONTH", false // Default: false
- *     enable_profiler?: bool|Param, // Whether or not to enable the profiler collector to calculate and visualize migration status. This adds some queries overhead. // Default: false
- *     transactional?: bool|Param, // Whether or not to wrap migrations in a single transaction. // Default: true
- * }
  * @psalm-type ConfigType = array{
  *     imports?: ImportsConfig,
  *     parameters?: ParametersConfig,
  *     services?: ServicesConfig,
  *     framework?: FrameworkConfig,
  *     doctrine?: DoctrineConfig,
- *     doctrine_migrations?: DoctrineMigrationsConfig,
  *     "when@dev"?: array{
  *         imports?: ImportsConfig,
  *         parameters?: ParametersConfig,
@@ -917,7 +892,6 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         framework?: FrameworkConfig,
  *         maker?: MakerConfig,
  *         doctrine?: DoctrineConfig,
- *         doctrine_migrations?: DoctrineMigrationsConfig,
  *     },
  *     "when@prod"?: array{
  *         imports?: ImportsConfig,
@@ -925,7 +899,6 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         services?: ServicesConfig,
  *         framework?: FrameworkConfig,
  *         doctrine?: DoctrineConfig,
- *         doctrine_migrations?: DoctrineMigrationsConfig,
  *     },
  *     "when@test"?: array{
  *         imports?: ImportsConfig,
@@ -933,7 +906,6 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         services?: ServicesConfig,
  *         framework?: FrameworkConfig,
  *         doctrine?: DoctrineConfig,
- *         doctrine_migrations?: DoctrineMigrationsConfig,
  *     },
  *     ...<string, ExtensionType|array{ // extra keys must follow the when@%env% pattern or match an extension alias
  *         imports?: ImportsConfig,

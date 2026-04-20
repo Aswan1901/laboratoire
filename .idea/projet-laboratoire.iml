@@ -11,12 +11,10 @@
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/deprecations" />
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/doctrine-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/doctrine-fixtures-bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/doctrine-migrations-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/lexer" />
-      <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/migrations" />
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/orm" />
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/persistence" />
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/doctrine/sql-formatter" />
@@ -84,6 +82,15 @@
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/symfony/css-selector" />
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/symfony/dom-crawler" />
       <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/phpstan/phpdoc-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/symfony/property-access" />
+      <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/symfony/property-info" />
+      <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/symfony/serializer" />
+      <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/symfony/type-info" />
+      <excludeFolder url="file://$MODULE_DIR$/laboratoire/vendor/webmozart/assert" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
